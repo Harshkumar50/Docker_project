@@ -47,7 +47,7 @@ pipeline {
 
     post {
         success {
-            echo "✅ Frontend deployed successfully at http://localhost:$HOST_PORT"
+            echo "✅ Frontend deployed has been successfully at http://localhost:$HOST_PORT"
         }
         failure {
             echo '❌ Deployment failed. Cleaning up...'
@@ -57,4 +57,4 @@ pipeline {
             cleanWs()
         }
     }
-}
+}    

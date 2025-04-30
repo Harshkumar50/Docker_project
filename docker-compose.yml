@@ -5,7 +5,7 @@ services:
     container_name: gym-website
     build:
       context: .                # This specifies the build context (current directory)
-      dockerfile: Dockerfile     # Specify the Dockerfile to build from
+      dockerfile: Dockerfile     # Specify the Dockerfile to build from dockerfile
     ports:
       - "8081:80"               # Exposes port 8080 on your machine to port 80 in the container
     restart: unless-stopped     # Container will restart unless manually stopped
