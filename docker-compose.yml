@@ -1,13 +1,12 @@
 version: '3.8'
 
 services:
-  gym-frontend:
-    container_name: gym-website
+  gym-website:
     build:
-      context: .                # This specifies the build context (current directory)
-      dockerfile: Dockerfile     # Specify the Dockerfile to build from dockerfile
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "8081:80"               # Exposes port 8080 on your machine to port 80 in the container
-    restart: unless-stopped     # Container will restart unless manually stopped
+      - "8080:80"
     volumes:
-      - .:/usr/share/nginx/html # Optional: Mount local directory to container for live updates (if using Nginx for example)
+      - .:/usr/share/nginx/html
+    container_name: gym_website
